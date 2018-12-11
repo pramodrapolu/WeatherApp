@@ -11,7 +11,7 @@ import android.content.Context;
 public class JobScheduleUtil {
 
     private static final int JOB_ID = 101;
-    private static final long MILLISECONDS_IN_HOUR = 3000L;
+    private static final long MILLISECONDS_IN_HOUR = 1800000L;
 
     public static void scheduleWeatherUpdate(Context context) {
         JobScheduler jobScheduler = (JobScheduler) context.getSystemService(Context
