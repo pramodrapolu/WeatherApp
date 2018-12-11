@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tab_elevation">4dp</dimen>
+    <dimen name="text_spacing">4dp</dimen>
+    <dimen name="editext_margin_padding">10dp</dimen>
+    <dimen name="tablayout_top_margin">10dp</dimen>
+    <dimen name="min_max_top_margin">10dp</dimen>
+
+    <dimen name="padding_8dp">8dp</dimen>
+    <dimen name="padding_16dp">16dp</dimen>
+    <dimen name="padding_36dp">36dp</dimen>
+    <dimen name="progress_bar_dimens">50dp</dimen>
+
+    <dimen name="default_text_size">16sp</dimen>
+    <dimen name="weather_provider_text_size">24sp</dimen>
+    <dimen name="city_text_size">24sp</dimen>
+    <dimen name="temp_text_size">48sp</dimen>
+    <dimen name="temp_list_text_size">24sp</dimen>
+    <dimen name="welcome_header_size">20sp</dimen>
+
+</resources>

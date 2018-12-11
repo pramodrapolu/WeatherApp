@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffff</color>
+
+    <color name="status_bar_color">#0277BD</color>
+    <color name="top_section">#0288D1</color>
+
+    <color name="fragment_background">#03A9F4</color>
+</resources>
