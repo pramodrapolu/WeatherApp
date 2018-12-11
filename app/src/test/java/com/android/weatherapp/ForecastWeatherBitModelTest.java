@@ -20,13 +20,11 @@ public class ForecastWeatherBitModelTest {
     private static final String NUMBER_OF_DAYS = "5";
     private static final String UNITS = "I";
 
-    private WeatherBitProvider mWeatherBitProvider;
     private Single<WeatherBitForecastWeather> mForecastSingle;
-    private TestObserver<WeatherBitForecastWeather> mTestObserver;
 
     @Before
     public void initSetup() {
-        mWeatherBitProvider = new WeatherBitProvider();
+        WeatherBitProvider mWeatherBitProvider = new WeatherBitProvider();
         WeatherApi weatherApi = Access.getInstance().getWeatherApi(CURRENT_WEATHER_BASE_URL);
         mForecastSingle = weatherApi.getForecastWeather("Boston",
                 UNITS, NUMBER_OF_DAYS, API_KEY);
@@ -34,7 +32,7 @@ public class ForecastWeatherBitModelTest {
 
     @Test
     public void testIfSuccessfullCall() {
-        mTestObserver = mForecastSingle.test();
+        TestObserver<WeatherBitForecastWeather> mTestObserver = mForecastSingle.test();
         mTestObserver.awaitTerminalEvent();
         mTestObserver.assertNoErrors();
     }

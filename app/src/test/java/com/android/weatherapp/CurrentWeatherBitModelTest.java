@@ -18,13 +18,11 @@ public class CurrentWeatherBitModelTest {
     private static final String API_KEY = "4022c71a55414c13a2a0e1318e696783";
     private static final String UNITS = "I";
 
-    private WeatherBitProvider mWeatherBitProvider;
     private Single<WeatherBitCurrentWeather> mCurrentSingle;
-    private TestObserver<WeatherBitCurrentWeather> mTestObserver;
 
     @Before
     public void initSetup() {
-        mWeatherBitProvider = new WeatherBitProvider();
+        WeatherBitProvider mWeatherBitProvider = new WeatherBitProvider();
         WeatherApi weatherApi = Access.getInstance().getWeatherApi(CURRENT_WEATHER_BASE_URL);
         mCurrentSingle = weatherApi.getCurrentWeatherBit("Boston",
                 UNITS, API_KEY);
@@ -32,7 +30,7 @@ public class CurrentWeatherBitModelTest {
 
     @Test
     public void testIfSuccessfullCall() {
-        mTestObserver = mCurrentSingle.test();
+        TestObserver<WeatherBitCurrentWeather> mTestObserver = mCurrentSingle.test();
         mTestObserver.awaitTerminalEvent();
         mTestObserver.assertNoErrors();
     }

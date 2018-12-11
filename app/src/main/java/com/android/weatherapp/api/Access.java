@@ -95,8 +95,6 @@ public class Access {
      * @return Retrofit.
      */
     private Retrofit getRetrofit(String endPoint) {
-        Logger.log(Log.INFO, TAG, "Building Retrofit");
-
         Retrofit.Builder retrofitBuilder = new Retrofit.Builder();
         retrofitBuilder.baseUrl(endPoint);
         retrofitBuilder.addCallAdapterFactory(RxJava2CallAdapterFactory.create());
